@@ -1,0 +1,71 @@
+{
+  "template": "acled*",
+  "mappings": {
+    "_default_": {
+      "dynamic_templates": [
+        {
+          "strings": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "text",
+	      "analyzer": "english",
+              "fields": {
+                "raw": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "event": {
+      "properties": {
+        "timestamp": {
+          "type": "date",
+          "format": "epoch_second"
+        },
+        "event_date": {
+          "type": "date",
+          "format": "dd MMMM yyyy"
+        },
+        "location": {
+          "type": "geo_point"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "gwno": {
+          "type": "integer"
+        },
+        "time_precision": {
+          "type": "integer"
+        },
+        "inter1": {
+          "type": "integer"
+        },
+        "inter2": {
+          "type": "integer"
+        },
+        "interaction": {
+          "type": "integer"
+        },
+        "geo_precision": {
+          "type": "integer"
+        },
+        "fatalities": {
+          "type": "integer"
+        },
+        "data_id": {
+          "type": "integer"
+        },
+        "latitude": {
+          "type": "double"
+        },
+        "longitude": {
+          "type": "double"
+        }
+      }
+    }
+  }
+}
